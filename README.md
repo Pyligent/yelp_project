@@ -1,2 +1,3 @@
-# yelp_project
-## The detailed markdown is under editing, coming soon..
+# Yelp Business Data Analytics, Recommendation and Rating Prediction
+
+## 
