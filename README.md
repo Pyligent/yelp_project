@@ -18,7 +18,7 @@
 
 ### Data Sets
 - The Yelp dataset includes 1,223,094 tips by 1,637,138 user.There are over 1.2 million business attributes like hours, parking, availability, and ambience. It is aggregated check-ins over time for each of the 192,609 businesses. We will use the newly updated dataset from Yelp Dataset Website. You can download it from this [Link](https://www.yelp.com/dataset)
-
+![yd](https://github.com/Pyligent/pyligent.github.io/blob/master/img/yelpdata.png)
 <hr>
 
 ### Project Overview
