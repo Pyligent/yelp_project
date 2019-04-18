@@ -5,7 +5,7 @@
 + [Data Sets](#Data-Sets)
 + [Project Overview](#Project-Overview)   
 + [Workflow Engine and API format](#Workflow-Engine-and-API-format)
-+ [Data Extract,Transform and Load](#1-Data-Extract-Transform-and-Load)
++ [Data Extract,Transform and Load](#Data-Extract-Transform-and-Load)
 + [Data Dashboard and Visualization](#3-Data-Dashboard)
 + [Feature Enginerring](#4-Feature-Enginerring)
 + [Recommendation Algorithm](#5-Recommendation-Algorithm)
@@ -77,7 +77,9 @@
 
 <hr>
 
-    
+### Data Extract Transform and Load  
+- Raw data set is in JSON format, so first we need convert JSON into CSV, then we use python to do the data preprocessing and load into PostgreSQL.
+
   
 
 
