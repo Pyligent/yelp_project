@@ -23,7 +23,7 @@
 
 ### Project Overview
 - This project is a full-stack data analytics application. The whole process incudes:
-  + Get the raw data (From the Yelp.com)
+  + Raw dataset (From the Yelp.com)
   + Data Preprocessing, Extract-Transform-Load (JSON to CSV, Database: PostgreSQL 10)
   + Data Visualization and EDA - Discover and visualize the data to gain insights ( Matplotlib, Seaborn, JavaScript, D3, plot.ly and leaflet mapping)
   + Feature Engineering - Numeric Features,Categorical Features,Time Series Features,Text Features and Handling the missing data
