@@ -44,9 +44,9 @@
     - The application will show the all business rating vs review counts in heatmap, the maps will be in different layers based on the rating and review counts
     
 <hr>
-### Workflow Engine and API format
 
-#### Workflow Engine
+
+### Workflow Engine and API format
 - Raw Data Transformation: JSON to CSV
 - Data Storage : PostgreSQL   
 - Workflow Engine (WFE): Flask Web Server/SQLAchemy/Python   
