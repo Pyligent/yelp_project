@@ -79,7 +79,7 @@
 
 ### Data Extract Transform and Load  
 - Raw data set is in JSON format, so first we need convert JSON into CSV, then we use python to do the data preprocessing and load into PostgreSQL.
-
+[!img](https://github.com/Pyligent/yelp_project/blob/master/pics/load.png)
   
 
 
