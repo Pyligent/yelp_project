@@ -25,7 +25,7 @@
   + Get the raw data (From the Yelp.com)
   + Data Preprocessing, Extract-Transform-Load (JSON to CSV, Database: PostgreSQL 10)
   + Data Visualization and EDA - Discover and visualize the data to gain insights ( Matplotlib, Seaborn, JavaScript, D3, plot.ly and leaflet mapping)
-  + Feature Enginerring - Numeric Features,Categorical Features,Time Series Features,Text Features and Handling the missing data
+  + Feature Engineering - Numeric Features,Categorical Features,Time Series Features,Text Features and Handling the missing data
   + Select the machine learning models,train and fine-tune the models (Logistic Regression,XGBoost,Light-GBM and Ensemble Models)
   + Select the recommendation algorithm(Item-based Collaborative filter)
   + Deploy the system and provide the APIs capabilities (Python Flask Web Server)
@@ -45,6 +45,18 @@
     
 <hr>
 ### Workflow Engine and API format
+
+#### Workflow Engine
+- Raw Data Transformation: JSON to CSV
+- Data Storage : PostgreSQL   
+- Workflow Engine (WFE): Flask Web Server/SQLAchemy/Python   
+- Front END Web Application/GUI : HTML/CSS, JavaScript,D3,Leaflet.js,Plot.ly
+- Back End: Feature Engineering,Machine Learning Models, Item-based Collaborative filter algorithm for Recommendation
+- Production Deployment on Heroku.com or GCP
+
+#### API format
+
+<hr>
 
     
   
