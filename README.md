@@ -7,7 +7,7 @@
 + [Workflow Engine and API format](#Workflow-Engine-and-API-format)
 + [Data Extract,Transform and Load](#Data-Extract-Transform-and-Load)
 + [Data Dashboard and Visualization](#Data-Dashboard)
-+ [Feature Enginerring](#4-Feature-Enginerring)
++ [Feature Engineering](#Feature-Engineering)
 + [Recommendation Algorithm](#5-Recommendation-Algorithm)
 + [Rating Prediction Model](#6-Rating-Prediction-Model)
 
@@ -84,6 +84,19 @@
 <hr>
 
 ### Data Dashboard
+
+![img1](https://github.com/Pyligent/yelp_project/blob/master/pics/dashpyelp.png)
+  
+<hr>
+
+### Feature Engineering
+
+- Categories in Yelp dataset is very complicated. There are always a long text to describe the business' category. The reason behind this is that categories are added by business owners. So we created a categorial algorithm to simplify the category description and easy to query.
+![img2](https://github.com/Pyligent/yelp_project/blob/master/pics/cate.png)
+  
+<hr>
+
+
 
 
 
