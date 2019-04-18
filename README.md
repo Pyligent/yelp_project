@@ -8,8 +8,9 @@
 + [Data Extract,Transform and Load](#Data-Extract-Transform-and-Load)
 + [Data Dashboard and Visualization](#Data-Dashboard)
 + [Feature Engineering](#Feature-Engineering)
-+ [Recommendation Algorithm](#5-Recommendation-Algorithm)
-+ [Rating Prediction Model](#6-Rating-Prediction-Model)
++ [Recommendation Algorithm](#Recommendation-Algorithm)
++ [Rating Prediction Model](#Rating-Prediction-Model)
++ [API Query](#API-Query)
 
 <hr>
 
@@ -89,13 +90,35 @@
   
 <hr>
 
-### Feature Engineering
+### Feature Engineering   
 
 - Categories in Yelp dataset is very complicated. There are always a long text to describe the business' category. The reason behind this is that categories are added by business owners. So we created a categorial algorithm to simplify the category description and easy to query.
 ![img2](https://github.com/Pyligent/yelp_project/blob/master/pics/cate.png)
   
 <hr>
 
+### Recommendation Algorithm   
+- Item-based Collaborative filter algorithm is used as the business recommendation engine
+
+![img3](https://github.com/Pyligent/yelp_project/blob/master/pics/rec.png)
+  
+<hr>
+
+### Rating Prediction Model   
+-The application uses four machine learning models to predict the rating. The logistic Regression,XGBoost,light-GBM and ensemble models are trained in this application.if we set the threshold is 70%, the best model accuracy is around 68%.Also the feature importances are provided.
+
+- Rating Maps Analytics
+![img4](https://github.com/Pyligent/yelp_project/blob/master/pics/map.png)
+  
+<hr>
+
+### API Query
+   
+- By using Yelp Fusion API, the application will data-visualize the query results.
+
+![img4](https://github.com/Pyligent/yelp_project/blob/master/pics/api.png)
+  
+<hr>
 
 
 
