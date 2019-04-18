@@ -49,14 +49,31 @@
 ### Workflow Engine and API format
 
 #### Workflow
-- Raw Data Transformation: JSON to CSV
+- Raw Data Transform: JSON to CSV
 - Data Storage : PostgreSQL   
 - Workflow Engine (WFE): Flask Web Server/SQLAchemy/Python   
-- Front END Web Application/GUI : HTML/CSS, JavaScript,D3,Leaflet.js,Plot.ly
+- Front END: Web Application/GUI, HTML/CSS, JavaScript,D3,Leaflet.js,Plot.ly
 - Back End: Feature Engineering,Machine Learning Models, Item-based Collaborative filter algorithm for Recommendation
 - Production Deployment on Heroku.com or GCP
 
 #### API format
+- **Flask API JSON Data Route**:
+  + @app.route("/yelp_metadata")
+  + @app.route("/yelp_metadata/<filter_name>")
+  + @app.route("/city/<city_name>")
+  + @app.route("/stars/<stars_>")
+  + @app.route("/yelp_metadata/pages/<num>")
+  + @app.route("/city/<city>/<page_num>")
+  + @app.route("/stars/<stars_>/<page_num>")
+  + @app.route("/apiquery/<term>/<location>")
+  + @app.route("/category_feature/<num>")
+  + @app.route("/category_feature_count/<num>")
+  + @app.route("/category_feature/keyword/<keyword>")
+  + @app.route("/category_feature/keyword/<keyword>/<page_num>")
+  + @app.route("/recsys/<biz_index>/<top_n>")
+  + @app.route("/yelp_rec_metadata/pages/<num>")
+  + @app.route("/yelp_rec_metadata")
+
 
 <hr>
 
