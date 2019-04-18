@@ -109,7 +109,16 @@
 
 - Rating Maps Analytics
 ![img4](https://github.com/Pyligent/yelp_project/blob/master/pics/map.png)
+
+   
+- Models and Model Performances
+![model](https://github.com/Pyligent/yelp_project/blob/master/static/en.jpg)
   
+  
+   
+- Feature Importances
+![FE](https://github.com/Pyligent/yelp_project/blob/master/static/feature_importance_en.jpg)
+
 <hr>
 
 ### API Query
