@@ -85,7 +85,7 @@
 
 ### Data Dashboard
 
-![img1](https://github.com/Pyligent/yelp_project/blob/master/pics/dashpyelp.png)
+![img1](https://github.com/Pyligent/yelp_project/blob/master/pics/dashyelp.png)
   
 <hr>
 
