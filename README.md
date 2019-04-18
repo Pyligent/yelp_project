@@ -6,7 +6,7 @@
 + [Project Overview](#Project-Overview)   
 + [Workflow Engine and API format](#Workflow-Engine-and-API-format)
 + [Data Extract,Transform and Load](#Data-Extract-Transform-and-Load)
-+ [Data Dashboard and Visualization](#3-Data-Dashboard)
++ [Data Dashboard and Visualization](#Data-Dashboard)
 + [Feature Enginerring](#4-Feature-Enginerring)
 + [Recommendation Algorithm](#5-Recommendation-Algorithm)
 + [Rating Prediction Model](#6-Rating-Prediction-Model)
@@ -81,6 +81,9 @@
 - Raw data set is in JSON format, so first we need convert JSON into CSV, then we use python to do the data preprocessing and load into PostgreSQL.
 ![img](https://github.com/Pyligent/yelp_project/blob/master/pics/load.png)
   
+<hr>
+
+### Data Dashboard
 
 
 
