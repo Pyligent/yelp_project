@@ -48,7 +48,8 @@ app = Flask(__name__)
 # It now uses private keys to authenticate requests (API Key)
 # You can find it on
 # https://www.yelp.com/developers/v3/manage_app
-API_KEY= 'YELP_API_KEY'
+API_KEY= '_cpGLbwJAbOMpQDN5Ic8n3KBcJwOY5nJg_IZCS6fBo17_x1RBbbYzw3kxS2u9tUbnfPsD4N4SHnqOw7FmPIfFn5bCfSbaBQ1pUeiz4KaApRIUKjqXjlJrlNW1e-iXHYx' 
+
 
 # API constants, you shouldn't have to change these.
 API_HOST = 'https://api.yelp.com'
@@ -179,6 +180,35 @@ sel_all = [
         Basic_data_model.review_count,
         Basic_data_model.stars,
         ]
+#columns = ["index","name","address","city","postal_code","categories","review_count","stars"];
+
+sel_rec_all = [ 
+        Basic_data_model.index,
+        Basic_data_model.name,
+        Basic_data_model.address,
+        Basic_data_model.city,
+        Basic_data_model.postal_code,
+        Basic_data_model.categories,
+        Basic_data_model.review_count,
+        Basic_data_model.stars,
+        ]
+
+def build_rec_metadata_list(yelp_jsondata_list,results):
+    
+    yelp_jsondata={}
+    for result in results:
+        yelp_jsondata['index'] = result[0]
+        yelp_jsondata['name'] = result[1]
+        yelp_jsondata['address'] = result[2]
+        yelp_jsondata['city'] = result[3]
+        yelp_jsondata['postal_code'] = result[4]
+        yelp_jsondata['categories'] = result[5]
+        yelp_jsondata['review_count'] = result[6]
+        yelp_jsondata['stars'] = result[7]
+       
+        yelp_jsondata_list.append(yelp_jsondata)
+        yelp_jsondata={}
+    return yelp_jsondata_list
 
 def build_metadata_list(yelp_jsondata_list,results):
     
@@ -519,6 +549,7 @@ def yelp_recommender(items_df, biz_index, top_n):
 
 
         rec_jsondata['index'] = basic_rec_df.loc[biz_index].name
+        rec_jsondata['Similarity_score'] = 'Original'
         rec_jsondata['business_id'] = basic_rec_df.loc[biz_index]['business_id']
         rec_jsondata['tokenized_category'] = basic_rec_df.loc[biz_index]['tokenized_category']
         rec_jsondata['Rating'] = basic_rec_df.loc[biz_index]['stars']
@@ -547,7 +578,7 @@ def yelp_recommender(items_df, biz_index, top_n):
     
     
     else:
-        print('Whoops! Choose another paper. Try something from here: \n', basic_rec_df.index[100:200])
+        print('Whoops! Choose another. Try something from here: \n', basic_rec_df.index[100:200])
     
     return rec_jsondata_list
 
@@ -557,7 +588,43 @@ def yelp_recommender(items_df, biz_index, top_n):
 @app.route("/recsys/<biz_index>/<top_n>")
 def recsys_query(biz_index,top_n):
     rec_list = yelp_recommender(sim_features_fromfile,int(biz_index),int(top_n))
-    return jsonify(rec_list)
+    full_rec_list = []
+    for rec in rec_list:
+        biz_id = rec['business_id']
+        """Return a list of business Information based on queried city."""
+    
+        results = session.query(*sel_all).filter(Basic_data_model.business_id==biz_id).all() 
+        jsondata_list = []
+        results_list = build_metadata_list(jsondata_list,results)
+        full_rec_list.append(results_list)
+
+
+
+    return jsonify(full_rec_list)
+
+
+#columns = ["index","name","address","city","postal_code","categories","review_count","stars"];
+
+@app.route("/yelp_rec_metadata/pages/<num>")
+def rec_metadata_bypage(num):
+
+# Use Pandas to perform the sql query
+    table_list_num = int(num)*5
+    results = session.query(*sel_rec_all).limit(table_list_num).all()
+    jsondata_list = []
+    results_list = build_rec_metadata_list(jsondata_list,results)
+    
+    return jsonify(results_list[(table_list_num-5):])
+
+@app.route("/yelp_rec_metadata")
+def yelp_rec_metadata():
+
+# Use Pandas to perform the sql query
+    results = session.query(*sel_rec_all).all()
+    yelp_jsondata_list = []
+    results_list = build_rec_metadata_list(yelp_jsondata_list,results)
+    
+    return jsonify(results_list)
 
 
 
